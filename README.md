@@ -14,7 +14,7 @@ autorFormulario: Me permite agregar un nuevo autor de un libro
 bibliotecaFormulario: me permite agregar una nueva biblioteca
 libroFormulario: Me permite agregar un nuevo libro cuyo autor previamente ya se encuentra registrado.
 
-Ej: Ejecutar: http://127.0.0.1:8000/App_biblioteca/libroFormulario/
+Ej: Ejecutar: http://127.0.0.1:8000/App_biblioteca/biblioteca/
 
 Formulario de busqueda:
 busquedaAutor: me permite buscar un autor especifico y obtener cierto tipo de informacion del mismo.
