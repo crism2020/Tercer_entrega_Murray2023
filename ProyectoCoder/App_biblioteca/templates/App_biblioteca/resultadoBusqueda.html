@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+{% load static %}
+{% block contenidoquecambia %}
+    <p> Estamos buscando los Autores con Apellido: {{apellido}} </p>
+    {% if autores %} 
+        <ul>
+            {% for autor in autores %} 
+                <li>
+                    {{autor.nombre}} - {{autor.dni}}
+                </li>
+             {% endfor %} 
+        </ul> 
+    {% else %} 
+        <p> No se encontraron autores </p>
+        
+    {% endif %}
+
+{% endblock contenidoquecambia%} 
