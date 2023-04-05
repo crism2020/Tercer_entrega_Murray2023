@@ -1,6 +1,17 @@
-{% extends "padre.html" %} 
-{% load static %} 
-{% block contenidoquecambia %} 
-    <h1> Autores </h1>
-    <p>Listado de información básica sobre los autores de la bibliografía publicada</p>
-{% endblock contenidoquecambia %} 
+{% extends "padre.html" %}
+{% load static %}
+{% block contenidoquecambia %}
+    <h1> Formulario - Agregar Autor </h1>
+    <!-- "mensaje"-->
+    {% if miFormularioautor.errors %}
+    <p style="color: red;"> Estan mal los datos, revisar </p>
+    {% endif %}
+    <form action="" method="POST" > {% csrf_token %}
+        <!-- "mensaje"-->
+        <table>
+            {{miFormularioautor.as_table}}
+        
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenidoquecambia%} 

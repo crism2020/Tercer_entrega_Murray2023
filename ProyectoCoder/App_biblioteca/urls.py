@@ -6,9 +6,9 @@ urlpatterns=[
     path("autor/", autor, name="Autor"),
     path("biblioteca/", biblioteca, name="Biblioteca"),
     path("libro/", libro, name="Libro"),
-    path("libroFormulario/", libroFormulario, name="LibroFormulario"),
-    path("autorFormulario/", autorFormulario, name="AutorFormulario"),
-    path("bibliotecaFormulario/", bibliotecaFormulario, name="BibliotecaFormulario"),
+    #path("libroFormulario/", libroFormulario, name="LibroFormulario"),
+    #path("autorFormulario/", autorFormulario, name="AutorFormulario"),
+    #path("bibliotecaFormulario/", bibliotecaFormulario, name="BibliotecaFormulario"),
     path("busquedaAutor/", busquedaAutor, name="BusquedaAutor"),
     path("buscar/", buscar, name="Buscar"),
 ]

@@ -1,6 +1,16 @@
-{% extends "padre.html" %} 
-{% load static %} 
-{% block contenidoquecambia %} 
-    <h1> Bibliografia </h1>
-    <p>Información específica de libros de autor</p>
-{% endblock %} 
+{% extends "padre.html" %}
+{% load static %}
+{% block contenidoquecambia %}
+    <h1> Formulario - Agregar Libro </h1>
+    {% if miFormulario_libro.errors %}
+    <p style="color: red;"> Estan mal los datos, revisar </p>
+    {% endif %}
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{miFormulario_libro.as_table}}
+
+        </table>
+        <input type="submit", value="Enviar">
+    </form>
+{% endblock contenidoquecambia %} 
+

@@ -17,7 +17,7 @@ def biblioteca(self):
 def libro(self):
     return render(self, "libro.html")
 
-def autorFormulario(request):
+def autor(request):
     if request.method == "POST":
         miFormularioautor=AutorFormulario(request.POST)
         print(miFormularioautor)
@@ -28,13 +28,13 @@ def autorFormulario(request):
             return render(request, "inicio.html")
     else:
         miFormularioautor=AutorFormulario()
-    return render(request, "autorFormulario.html", {"miFormularioautor": miFormularioautor})
+    return render(request, "autor.html", {"miFormularioautor": miFormularioautor})
 
             
     
  
 
-def libroFormulario(request):
+def libro(request):
     if request.method=="POST":
         miFormulario_libro=LibroFormulario(request.POST)
         print(miFormulario_libro)
@@ -45,9 +45,9 @@ def libroFormulario(request):
             return render(request, "inicio.html")
     else:
         miFormulario_libro=LibroFormulario()
-    return render(request, "libroFormulario.html",{"miFormulario_libro": miFormulario_libro})
+    return render(request, "libro.html",{"miFormulario_libro": miFormulario_libro})
 
-def bibliotecaFormulario(request):
+def biblioteca(request):
      if request.method=="POST":
         miFormulario_biblioteca=BibliotecaFormulario(request.POST)
         print(miFormulario_biblioteca)
@@ -58,7 +58,7 @@ def bibliotecaFormulario(request):
             return render(request, "inicio.html")
      else:
         miFormulario_biblioteca=BibliotecaFormulario()
-     return render(request, "bibliotecaFormulario.html", {"miFormulario_biblioteca": miFormulario_biblioteca})
+     return render(request, "biblioteca.html", {"miFormulario_biblioteca": miFormulario_biblioteca})
 
 def busquedaAutor(request):
      return render(request, "App_biblioteca/busquedaAutor.html")
