@@ -40,7 +40,7 @@ def libroFormulario(request):
         print(miFormulario_libro)
         if miFormulario_libro.is_valid():
             informacion=miFormulario_libro.cleaned_data
-            libro=Libro(titulo=informacion["titulo"], autor=informacion["autor"], isbn=informacion["isbn"] )
+            libro=Libro(titulo=informacion["titulo"], autor_dni=informacion["autor_dni"], isbn=informacion["isbn"] )
             libro.save()
             return render(request, "inicio.html")
     else:

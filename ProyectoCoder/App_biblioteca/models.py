@@ -12,8 +12,11 @@ class Autor(models.Model):
     
 class Libro(models.Model):
     titulo=models.CharField(max_length=20)
-    autor=models.ForeignKey(Autor, on_delete=models.CASCADE)
+    autor_dni=models.CharField(max_length=20, blank=False, null=False)
     isbn=models.CharField(max_length=20)
+
+    def autor(self):
+        return Autor.objects.get(dni=self.autor_dni)
 
 
 

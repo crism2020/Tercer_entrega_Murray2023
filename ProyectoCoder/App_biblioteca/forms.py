@@ -1,4 +1,5 @@
 from django import forms
+from .models import *
 
 class AutorFormulario(forms.Form):
     nombre=forms.CharField()
@@ -8,8 +9,12 @@ class AutorFormulario(forms.Form):
 
 class LibroFormulario(forms.Form):
     titulo=forms.CharField()
-    autor=forms.CharField()
     isbn=forms.CharField()
+    autor_dni = forms.ModelChoiceField(queryset=Autor.objects.all(), empty_label="Seleccionar autor", required=True)
+
+
+
+   
 
 class BibliotecaFormulario(forms.Form):
     nombre=forms.CharField()
